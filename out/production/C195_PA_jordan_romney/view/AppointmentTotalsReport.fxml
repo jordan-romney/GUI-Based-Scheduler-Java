@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="850.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentTotalsReportController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="791.0" prefWidth="700.0" spacing="50.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="140.0" prefWidth="345.0">
+               <children>
+                  <ImageView fitHeight="99.0" fitWidth="161.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/global_logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="TOP_LEFT" text="Global Consulting Inc." textFill="#0a317a">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Label text="Appointment Totals" textFill="#0a317a">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <VBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="700.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="25.0" prefWidth="700.0" spacing="100.0">
+                     <children>
+                        <Label text="Select an Appointment Type" />
+                        <Label text="Select a Month" />
+                     </children>
+                     <padding>
+                        <Insets right="40.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="45.0" prefWidth="700.0" spacing="20.0">
+                     <children>
+                        <ComboBox fx:id="appointmentTypeCombo" onAction="#onAppointmentTypeCombo" prefHeight="25.0" prefWidth="195.0" />
+                        <ComboBox fx:id="dateCombo" onAction="#onDateCombo" prefWidth="195.0" />
+                     </children>
+                  </HBox>
+                  <Button mnemonicParsing="false" onAction="#onShowAllButton" text="Show All" textFill="#0a317a">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <Label fx:id="appointmentsLabel" text="Total Appointments: " textFill="#0a317a">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="numAppointmentLabel" text="Label">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </VBox>
+      <Button layoutX="604.0" layoutY="801.0" mnemonicParsing="false" onAction="#onCloseButton" text="Close" textFill="#0a317a">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

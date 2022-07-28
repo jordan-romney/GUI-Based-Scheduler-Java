@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeScreenController">
+   <children>
+      <HBox layoutX="88.0" layoutY="426.0" prefHeight="30.0" prefWidth="280.0" spacing="15.0">
+         <children>
+            <Button fx:id="appointmentAdd" mnemonicParsing="false" onAction="#onAppointmentAdd" text="Add" textFill="#0a317a">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="appointmentUpdate" mnemonicParsing="false" onAction="#onAppointmentUpdate" text="Update" textFill="#0a317a">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="appointmentDelete" mnemonicParsing="false" onAction="#onAppointmentDelete" text="Delete" textFill="#09317c">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+         </children>
+      </HBox>
+      <HBox layoutX="511.0" layoutY="800.0" prefHeight="30.0" prefWidth="280.0" spacing="15.0">
+         <children>
+            <Button fx:id="customerAdd" mnemonicParsing="false" onAction="#onCustomerAdd" text="Add" textFill="#0a317a">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="customerUpdate" mnemonicParsing="false" onAction="#onCustomerUpdate" text="Update" textFill="#09317c">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="customerDelete" mnemonicParsing="false" onAction="#onCustomerDelete" text="Delete" textFill="#09317c">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+         </children>
+      </HBox>
+      <TableView fx:id="allCustomersTable" layoutX="511.0" layoutY="441.0" prefHeight="350.0" prefWidth="834.0">
+        <columns>
+          <TableColumn fx:id="customerId" prefWidth="100.0" text="Customer ID" />
+          <TableColumn fx:id="customerName" prefWidth="150.0" text="Name" />
+            <TableColumn fx:id="customerAddress" prefWidth="175.0" text="Address" />
+            <TableColumn fx:id="customerFLD" prefWidth="120.0" text="First-Level Division" />
+            <TableColumn fx:id="customerCountry" text="Country" />
+            <TableColumn fx:id="customerPostal" prefWidth="100.0" text="Postal Code" />
+            <TableColumn fx:id="customerPhone" prefWidth="125.0" text="Phone Number" />
+        </columns>
+      </TableView>
+      <TableView fx:id="allAppointmentsTable" layoutX="87.0" layoutY="67.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="1258.0">
+         <columns>
+            <TableColumn fx:id="appointmentId" prefWidth="115.0" text="Appointment ID" />
+            <TableColumn fx:id="title" prefWidth="150.0" text="Title" />
+            <TableColumn fx:id="description" prefWidth="150.0" text="Description" />
+            <TableColumn fx:id="location" prefWidth="150.0" text="Location" />
+            <TableColumn fx:id="contact" prefWidth="150.0" text="Contact" />
+            <TableColumn fx:id="type" prefWidth="100.0" text="Type" />
+            <TableColumn fx:id="start" prefWidth="150.0" text="Start Date/Time" />
+            <TableColumn fx:id="end" prefWidth="150.0" text="End Date/Time" />
+            <TableColumn fx:id="appointmentCustomerId" text="Customer ID" />
+            <TableColumn fx:id="userId" text="User ID" />
+         </columns>
+      </TableView>
+      <Label layoutX="357.0" layoutY="581.0" rotate="-90.0" text="Customers" textFill="#09317c">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="-109.0" layoutY="207.0" rotate="-90.0" text="Appointments" textFill="#09317c">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <HBox layoutX="87.0" layoutY="36.0" prefHeight="25.0" prefWidth="340.0" spacing="15.0">
+         <children>
+            <RadioButton fx:id="allAppointmentRadio" mnemonicParsing="false" onAction="#onAllAppointmentRadio" selected="true" text="View All">
+               <toggleGroup>
+                  <ToggleGroup fx:id="appointment" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="monthlyAppointmentRadio" mnemonicParsing="false" onAction="#onMonthlyAppointmentRadio" text="View Monthly" toggleGroup="$appointment" />
+            <RadioButton fx:id="weeklyAppointmentRadio" mnemonicParsing="false" onAction="#onWeeklyAppointmentRadio" text="View Weekly" toggleGroup="$appointment" />
+         </children>
+      </HBox>
+      <VBox alignment="TOP_CENTER" layoutX="90.0" layoutY="550.0" prefHeight="146.0" prefWidth="328.0">
+         <children>
+            <ImageView fitHeight="128.0" fitWidth="229.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/global_logo.png" />
+               </image>
+            </ImageView>
+            <Label text="Global Consulting Inc." textFill="#09317c">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <HBox layoutX="148.0" layoutY="800.0" prefHeight="30.0" prefWidth="189.0" spacing="15.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onReportSelectionButton" text="Report Selection" textFill="#0a317a">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="logOutButton" mnemonicParsing="false" onAction="#onLogOutButton" text="Log Out" textFill="#09317c">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

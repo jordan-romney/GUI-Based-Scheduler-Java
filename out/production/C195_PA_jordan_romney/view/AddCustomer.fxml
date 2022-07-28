@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="850.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddCustomerController">
+   <children>
+      <Label alignment="TOP_LEFT" layoutX="227.0" layoutY="125.0" text="Global Consulting Inc." textFill="#0a317a">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="99.0" fitWidth="161.0" layoutX="277.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/global_logo.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="278.0" layoutY="305.0" prefHeight="390.0" prefWidth="220.0" spacing="30.0">
+         <children>
+            <TextField fx:id="addCustomerIdText" editable="false" promptText="Auto Generated - Disabled" />
+            <TextField fx:id="addCustomerNameText" />
+            <TextField fx:id="addCustomerAddressText" />
+            <ComboBox fx:id="addCustomerCountryCombo" onAction="#onCountrySelect" prefHeight="25.0" prefWidth="221.0" promptText="Select Country" />
+            <ComboBox fx:id="addCustomerFirsLevelDivisionCombo" prefHeight="25.0" prefWidth="221.0" promptText="Select a Country First" />
+            <TextField fx:id="addCustomerPostalText" />
+            <TextField fx:id="addCustomerPhoneText" />
+         </children>
+      </VBox>
+      <VBox alignment="TOP_RIGHT" layoutX="115.0" layoutY="308.0" prefHeight="200.0" prefWidth="147.0" spacing="35.0">
+         <children>
+            <Label text="Customer ID:">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="10.0" layoutY="10.0" text="Customer Name:">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="10.0" layoutY="27.0" text="Address:">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="10.0" layoutY="61.0" text="Country:">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="10.0" layoutY="10.0" text="First-Level Division:">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="10.0" layoutY="44.0" text="Postal Code:">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="10.0" layoutY="78.0" text="Phone Number:">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+         </children>
+      </VBox>
+      <HBox alignment="TOP_CENTER" layoutX="251.0" layoutY="686.0" prefHeight="100.0" prefWidth="200.0" spacing="25.0">
+         <children>
+            <Button fx:id="addCustomerButton" mnemonicParsing="false" onAction="#onAddCustomerButton" text="Add" textFill="#09317c">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="cancelAddCustomerButton" mnemonicParsing="false" onAction="#onCancelAddCustomerButton" text="Cancel" textFill="#09317c">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+         </children></HBox>
+      <Label layoutX="290.0" layoutY="243.0" text="Add Customer" textFill="#0a317a">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

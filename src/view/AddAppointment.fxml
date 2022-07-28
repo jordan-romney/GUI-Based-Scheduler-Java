@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="850.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddAppointmentController">
+   <children>
+      <Label alignment="TOP_LEFT" layoutX="227.0" layoutY="109.0" text="Global Consulting Inc." textFill="#0a317a">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="99.0" fitWidth="161.0" layoutX="277.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/global_logo.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="289.0" layoutY="214.0" prefHeight="390.0" prefWidth="220.0" spacing="20.0">
+         <children>
+            <TextField fx:id="addAppointmentIdText" editable="false" promptText="Auto Generated - Disabled" />
+            <TextField fx:id="addAppointmentTitleText" />
+            <TextField fx:id="addAppointmentDescriptionText" />
+            <TextField fx:id="addAppointmentLocationText" />
+            <ComboBox fx:id="addAppointmentContactCombo" prefHeight="25.0" prefWidth="221.0" promptText="Select Contact" />
+            <TextField fx:id="addAppointmentTypeText" />
+            <DatePicker fx:id="addAppointmentStart" prefHeight="25.0" prefWidth="220.0" />
+            <ComboBox fx:id="addAppointmentStartTimeCombo" prefHeight="25.0" prefWidth="220.0" promptText="Select Start Time" />
+            <DatePicker fx:id="addAppointmentEnd" prefWidth="220.0" />
+            <ComboBox fx:id="addAppointmentEndTimeCombo" prefHeight="25.0" prefWidth="220.0" promptText="Select End Time" />
+            <ComboBox fx:id="addAppointmentCustomerCombo" layoutX="10.0" layoutY="415.0" prefHeight="25.0" prefWidth="220.0" promptText="Select Customer" />
+            <ComboBox fx:id="addAppointmentUserCombo" layoutX="10.0" layoutY="460.0" prefHeight="25.0" prefWidth="220.0" promptText="Select User" />
+         </children>
+      </VBox>
+      <VBox alignment="TOP_RIGHT" layoutX="126.0" layoutY="217.0" prefHeight="200.0" prefWidth="147.0" spacing="25.0">
+         <children>
+            <Label text="Appointment ID:">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="10.0" layoutY="10.0" text="Title:">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="10.0" layoutY="27.0" text="Description:">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="10.0" layoutY="10.0" text="Location:">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="10.0" layoutY="44.0" text="Contact:">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="10.0" layoutY="61.0" text="Type:">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="10.0" layoutY="78.0" text="Start Date:">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="48.0" layoutY="395.0" text="Start Time:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="43.0" layoutY="340.0" text="End Date:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="76.0" layoutY="450.0" text="End Time:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="96.0" layoutY="415.0" text="Customer Id:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="96.0" layoutY="460.0" text="User Id:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <HBox alignment="TOP_CENTER" layoutX="251.0" layoutY="818.0" prefHeight="100.0" prefWidth="200.0" spacing="25.0">
+         <children>
+            <Button fx:id="addAppointmentButton" mnemonicParsing="false" onAction="#onAddAppointmentButton" text="Add" textFill="#0a317a">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="cancelAddAppointmentButton" mnemonicParsing="false" onAction="#onCancelAddAppointmentButton" text="Cancel" textFill="#09317c">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+         </children></HBox>
+      <Label layoutX="274.0" layoutY="154.0" text="Add Appointment" textFill="#0a317a">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
